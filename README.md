@@ -304,6 +304,42 @@ If multiple selectors apply to the same element, then the following is the order
 
 If there is still a tie, then the rule that is declared later takes precedence.
 
+### CSS Units
+
+In CSS, we sometimes need set the size of something and, just like in math class, you need to use units. For example, if we want to set the margin of the body to 1 inch, we would do this:
+
+```css
+body {
+    margin: 1in; /* There is no space between the number and the unit */
+}
+```
+
+The most commonly used unit in css is `px`. The exact size of 1 `px` varies based on what you're viewing the page on, but it there is usually 96 `px` per `in`. You probably are already familiar with this unit as it is what's used in google docs for the font.
+
+[Here](https://www.w3schools.com/cssref/css_units.asp) is a list of all CSS units.
+
+One last note: If you're setting something to 0, you don't need units, because 0 is the same regardless of unit. 
+
+### Tables
+
+I mentioned earlier that HTML tables are quite ugly without CSS. This is because, by default, table cells don't have a border. To fix this, we will add css rule that adds a `border` to all `th` or `td` elements.
+
+```css
+th, td {
+    border: 1px solid black;
+}
+```
+
+As you can see, the border property has multiple values. The first is the width of the border, in our case, `1px`. The second is the border style; we want a solid border, so we use `solid` (other options include `dashed` and `dotted`). Finally, we put the color of the border, which we want to be black.
+
+If you tried this out, you may have noticed that while the borders now appear, they are not the flush gridlines we expect from a table, but instead, each cell has a separate rectangle around it, making it hard to read. To fix this, we set the `border-collapse` property:
+
+```css
+table {
+    border-collapse: collapse;
+}
+```
+
 ### External CSS Files
 
 If you have ever used a website, you will probably have noticed that many pages on that website look similar. This is because they all use the same CSS. It would be incredibly impractical to copy and paste our `<style>` element to every single page, especially as our styles get longer (for reference, the homepage of google has 671 CSS rules, each of which has several properties). To solve this problem, we can put css into its own file, and link it in each of the HTML pages that we want to use it in.
@@ -323,6 +359,15 @@ We put this link tag in the head to link to a stylesheet. An example link tag wo
 ```
 
 As you may have noticed, the link tag is self-closing, because it has no content.
+
+### Other CSS Properties
+
+Some other CSS properties that we've learned about are:
+
+- [Font Family](https://www.w3schools.com/cssref/pr_font_font-family.asp)
+- [Font Size](https://www.w3schools.com/css/css_font_size.asp)
+- [Width](https://www.w3schools.com/cssref/pr_dim_width.asp) and [Height](https://www.w3schools.com/cssref/pr_dim_height.asp)
+- [Position](https://www.w3schools.com/css/css_positioning.asp)
 
 ## Javascript
 
