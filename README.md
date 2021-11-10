@@ -104,7 +104,7 @@ The head contains information about the document that users don't need to see, b
 
 The meta tag has metadata&mdash;information about the page. You will notice that there is no closing meta tag (`</meta>`). This is because meta is a **self-closing tag**. Self-closing tags are tags that have not content, and therefore they only have the opening tag. The image tag, `<img>` is another example of a self-closing tag.
 
-You will also see that it has more than just the tag name within the tag. This is called an **attribute**, and it will be explained [later](#attributes-the-anchor-tag).
+You will also see that it has more than just the tag name within the tag. This is called an **attribute**, and it will be explained [later](#attributes--the-anchor-tag).
 
 The meta tag can contain lots of different types of information, such as author and search keywords. What we're using it for here is to tell the browser the charset of our page (you don't need to understand what this means). Like the doctype, the browser will *usually* be able to figure it out if you forget this, but in some cases leaving this tag out can result in garbled text.
 
